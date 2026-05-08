@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chick-fil-A Maple Grove</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/CFA_CSymbol_Circle_Red_RGB_master.png">
+  <link rel="apple-touch-icon" href="images/CFA_CSymbol_Circle_Red_RGB_master.png">
+</head>
+
+<body>
+
+  <nav>
+    <div class="brand">Chick-fil-A <span>Maple Grove</span></div>
+    <ul>
+      <li><a href="index.html" class="active">Welcome</a></li>
+      <li><a href="catering.html">Catering</a></li>
+      <li><a href="cfa-one.html">Chick-fil-A One</a></li>
+      <li><a href="our-food.html">Our Menu</a></li>
+      <li><a href="whoweare.html">About Us</a></li>
+      <li><a href="joinourteam.html">Join Our Team</a></li>
+      <li><a href="stafflogin.html" class="staff">Staff Portal</a></li>
+    </ul>
+  </nav>
+
+  <section class="hero hero-split">
+    <div class="hero-text">
+      <h1>Welcome to Chick-fil-A<br>Maple Grove</h1>
+      <p>Serving our community with great food, genuine hospitality, and a commitment to every guest.</p>
+      <div style="display:flex; gap:1rem; flex-wrap:wrap; margin-top:1.75rem;">
+        <a href="our-food.html" class="btn btn-red-outline">View Our Menu</a>
+        <a href="catering.html" class="btn btn-red-solid">Order Catering</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="images/230331_CFA_Logo_Script-Outline-Red_PMS_high-res.png" alt="Chick-fil-A Logo">
+    </div>
+  </section>
+
+  <div style="display:grid; grid-template-columns: 1fr 1fr;">
+
+    <!-- Left half: stacked Find Us + Our Commitment -->
+    <div style="display:grid; grid-template-rows: auto 1fr;">
+
+      <!-- Top left: Find Us (off-white) -->
+      <div style="background: var(--off-wh); padding: 3.5rem;">
+        <h2>Find Us in Maple Grove</h2>
+        <p>11820 Fountains Way, Maple Grove, MN 55369</p>
+        <p class="mt-1" style="color:var(--muted)">Call us: <a href="tel:7633070375" style="color:var(--muted)">(763) 307-0375</a></p>
+        <p class="mt-1" style="color:var(--muted)">Monday – Saturday: 6:30 AM – 10:00 PM<br>Sunday: Closed</p>
+        <a href="https://www.google.com/maps/search/?api=1&query=11820+Fountains+Way,+Maple+Grove,+MN+55369"
+          target="_blank" rel="noopener noreferrer" class="btn"
+          style="background:var(--red); color:#fff; margin-top:1.25rem; display:inline-block">Get Directions</a>
+        <iframe src="https://maps.google.com/maps?q=11820+Fountains+Way,+Maple+Grove,+MN+55369&output=embed"
+          style="border:0; border-radius: var(--radius); width:100%; height:260px; display:block; box-shadow: var(--shadow); margin-top:1.5rem;"
+          allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+
+      <!-- Bottom left: Our Commitment (white) -->
+      <div style="background: var(--white); padding: 3.5rem;">
+        <h2>Our Commitment to You</h2>
+        <p>At Chick-fil-A Maple Grove, we believe every guest deserves a remarkable experience — from the food on your tray to the smile you're greeted with at the door.</p>
+        <ul style="margin-top:1.25rem; padding-left:1.25rem; display:flex; flex-direction:column; gap:.6rem;">
+          <li style="color:var(--muted); font-family:var(--font-serif);">Fresh Food</li>
+          <li style="color:var(--muted); font-family:var(--font-serif);">Community First</li>
+          <li style="color:var(--muted); font-family:var(--font-serif);">My Pleasure</li>
+        </ul>
+      </div>
+
+    </div>
+
+    <!-- Right half: Seasonal Promotions (off-white, full height) -->
+    <div style="background: var(--gray); padding: 3.5rem;">
+      <h2>Seasonal Promotions</h2>
+      <p>Here's what's happening now at Chick-fil-A Maple Grove.</p>
+      <div style="display:flex; flex-direction:column; gap:1rem; margin-top:1.5rem;">
+        <div class="card">
+          <div class="card-body">
+            <h3>Cow Appreciation Day</h3>
+            <p>Tuesday, July 14th — dress like a cow and get a free entrée. One of our favorite days of the year.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Limited Time Items</h3>
+            <ul style="padding-left:1.25rem; margin-top:.5rem; display:flex; flex-direction:column; gap:.4rem;">
+              <li style="color:var(--muted); font-family:var(--font-serif);">Honey Pepper Pimento Sandwich</li>
+              <li style="color:var(--muted); font-family:var(--font-serif);">Pineapple Dragonfruit</li>
+              <li style="color:var(--muted); font-family:var(--font-serif);">Mac &amp; Cheese Kids Meal</li>
+            </ul>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Weekly App Deals</h3>
+            <p>New deals every week — exclusively on the Chick-fil-A app. Download it to make sure you never miss out.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <div style="background: var(--red)">
+    <div class="section text-center" style="color:#fff">
+      <h2 style="color:#fff">Catering for Any Occasion</h2>
+      <p style="color:rgba(255,255,255,.85); margin:0 auto">From office lunches to large events, let us take care of the
+        food so you can enjoy the moment.</p>
+      <a href="catering.html" class="btn btn-white mt-2" style="margin-top:1.5rem; display:inline-block">Explore
+        Catering</a>
+    </div>
+  </div>
+
+  <footer>
+    <strong>Chick-fil-A Maple Grove</strong><br>
+    11820 Fountains Way, Maple Grove, MN 55369 · <a href="tel:7633070375" style="color:inherit">Call us: (763) 307-0375</a><br>
+    <div style="margin:.75rem 0 .5rem; display:flex; justify-content:center; gap:1.5rem; align-items:center;">
+      <a href="https://www.facebook.com/chickfilamaplegrove/" target="_blank" rel="noopener" aria-label="Facebook"><img src="images/facebook.svg" alt="Facebook" style="width:28px;height:28px;opacity:.85;transition:opacity .15s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85"></a>
+      <a href="https://www.instagram.com/cfamaplegrove/" target="_blank" rel="noopener" aria-label="Instagram"><img src="images/instagram.svg" alt="Instagram" style="width:28px;height:28px;opacity:.85;transition:opacity .15s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85"></a>
+      <a href="https://www.tiktok.com/@chickfila.maplegrove" target="_blank" rel="noopener" aria-label="TikTok"><img src="images/tiktok.svg" alt="TikTok" style="width:28px;height:28px;opacity:.85;transition:opacity .15s;" onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85"></a>
+    </div>
+    &copy; 2026 · Locally operated
+  </footer>
+
+
+
+</body>
+
+</html>
