@@ -12,6 +12,7 @@
 
   <nav>
     <div class="brand">Chick-fil-A <span>Maple Grove</span></div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     <ul>
       <li><a href="index.html">Welcome</a></li>
       <li><a href="catering.html">Catering</a></li>
@@ -31,24 +32,34 @@
   <div style="background: var(--off-wh)">
     <div class="section text-center">
       <h2>The More You Visit, the More You Earn</h2>
-      <p style="margin:0 auto">Chick-fil-A One is our free rewards program. Every dollar you spend earns you points — and points unlock free food, exclusive offers, and more.</p>
-      <div class="grid grid-3 mt-2" style="text-align:left">
+      <p style="margin:0 auto">Chick-fil-A One is our free rewards program. Earn points on every qualifying purchase and redeem them for free food starting at just 200 points.</p>
+      <div class="grid grid-2 mt-2" style="text-align:left">
         <div class="card">
           <div class="card-body">
             <h3>Member</h3>
-            <p>Start earning 10 points per $1 spent the moment you sign up. Redeem for free food and treats.</p>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:.5rem;">Free to join</p>
+            <p>Earn 10 points per $1 spent on qualifying orders. Rewards start at 200 points and include free food like an Icedream® cone, Waffle Potato Fries®, and more.</p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
             <h3>Silver</h3>
-            <p>Reach Silver status and earn 11 points per $1. Plus unlock a free birthday reward.</p>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:.5rem;">Unlocks at 1,000 points</p>
+            <p>Earn 11 points per $1. Includes a free birthday reward, the ability to gift rewards to others, and backstage tour access at Chick-fil-A Home Office for up to 5 guests.</p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
-            <h3>Red &amp; Signature</h3>
-            <p>Our top tiers earn even more points and get access to exclusive perks and member-only offers.</p>
+            <h3>Red</h3>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:.5rem;">Unlocks at 4,000 points</p>
+            <p>Earn 12 points per $1. Includes all Silver benefits plus more ways to earn and redeem toward the food you love.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>Signature</h3>
+            <p style="font-size:.85rem;color:var(--muted);margin-bottom:.5rem;">Unlocks at 10,000 points</p>
+            <p>Earn 13 points per $1. Access exclusive rewards unavailable to any other tier, plus all benefits from every level below.</p>
           </div>
         </div>
       </div>
@@ -59,10 +70,17 @@
     <div style="display:grid; grid-template-columns:1fr 1fr; gap:3rem; align-items:center;">
       <div>
         <h2>Order Ahead. Skip the Line.</h2>
-        <p>Use the Chick-fil-A One app to place your order before you arrive — your food will be ready when you walk in. No waiting, no guessing.</p>
-        <p class="mt-1" style="color:var(--muted)">Available for pickup in-restaurant, drive-thru, or curbside at our Maple Grove location.</p>
+        <p>Place your order in minutes through the app before you even leave the house. Customize every detail, save your favorites, and pay right in the app. Your food will be ready when you arrive.</p>
+        <ul style="margin-top:1rem;padding-left:1.25rem;display:flex;flex-direction:column;gap:.5rem;color:var(--muted);font-family:var(--font-serif);">
+          <li>Personalize your order — extra pickles, sauce swaps, all of it</li>
+          <li>Pick up in-restaurant, drive-thru, or curbside</li>
+          <li>Find nearby locations and check delivery options</li>
+          <li>Set dietary preferences and filter the menu accordingly</li>
+          <li>Get notified about new items, exclusive offers, and local events</li>
+        </ul>
       </div>
-      <div class="img-placeholder">App Screenshot / Mockup</div>
+      <img src="images/CFA_IHA_MobileDineIn_Relaunch_Social_Cover_Family_16x9_original.jpg"
+        alt="Family dining in at Chick-fil-A" style="width:100%;border-radius:var(--radius);display:block;box-shadow:var(--shadow);">
     </div>
   </div>
 
@@ -111,5 +129,6 @@
     &copy; 2026 · Locally operated
   </footer>
 
+  <script src="nav.js"></script>
 </body>
 </html>

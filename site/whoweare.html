@@ -12,6 +12,7 @@
 
   <nav>
     <div class="brand">Chick-fil-A <span>Maple Grove</span></div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
     <ul>
       <li><a href="index.html">Welcome</a></li>
       <li><a href="catering.html">Catering</a></li>
@@ -32,45 +33,56 @@
     <div style="display:grid; grid-template-columns: 1fr 1.1fr; gap:4rem; align-items:center;">
       <div>
         <h2>Meet Our Operator</h2>
-        <p style="max-width: none;">Nancy and Jeff (spouse and all-around great guy) moved to Minnesota from Georgia in the summer of 2013 to open Chick-fil-A in Maple Grove, one of the first free standing location in the state. Both are proud Air Force veterans, who love this country and were honored to serve.</p>
+        <p style="max-width: none;">Nancy and Jeff (spouse and all-around great guy) moved to Minnesota from Georgia in the summer of 2013 to open Chick-fil-A in Maple Grove, one of the first freestanding locations in the state. Both are proud Air Force veterans, who love this country and were honored to serve.</p>
         <p class="mt-1" style="max-width: none;">Nancy was born in Indiana but raised around the world. As an Army brat she lived in several states, Germany and South Korea. Nancy loves sports but rarely plays them in her old age. She is also an ordained Lutheran pastor who enjoys helping people understand the grace of God and God’s love for all. She has a heart for people. Jeff was born in Ohio but raised in Georgia. He loves sports too but like Nancy he doesn’t play much anymore, just watches. Both are big SEC football fans. Go DAWGS! Jeff is a retired Delta pilot who now helps in the restaurant with maintenance and other stuff.</p>
-        <p class="mt-1" style="max-width: none;">Jeff and Nancy have two children, twins Jon and Jamie, born in San Antonio, Texas. Jon lives with his partner Joe in Berlin Germany and works for the German company, SAP. Jamie lives with her husband Jeremy in Savage, Minnesota. She works as a transplant nurse at Abbot Northwestern Hospital. They have a son, Henry, who loves visiting Crea and G (Jeff and Nancy) at their house on the river in Clearwater. He enjoys riding his John Deere and doing yardwork.</p>
+        <p class="mt-1" style="max-width: none;">Jeff and Nancy have two children, twins Jon and Jamie, born in San Antonio, Texas. Jon lives with his partner Joe in Berlin Germany and works for the German company, SAP. Jamie lives with her husband Jeremy in Savage, Minnesota. She works as a transplant nurse at Abbot Northwestern Hospital. They have two children, Henry and Annie, who are Jeff and Nancy's grandkids.</p>
       </div>
       <img src="images/Jeff+and+Nancy.jpg.webp" alt="Nancy and Jeff" style="border-radius: var(--radius); width: 100%; height: auto; box-shadow: var(--shadow);">
     </div>
   </div>
 
-  <div style="background: var(--off-wh)">
-    <div class="section">
+  <div style="display:grid; grid-template-columns: 1fr 1fr;">
+
+    <!-- Our Values -->
+    <div style="background: var(--off-wh); padding: 3.5rem;">
       <h2>Our Values</h2>
-      <p>Everything we do starts with a simple purpose: to glorify God by being a faithful steward of all that is entrusted to us and to have a positive influence on all who come in contact with Chick-fil-A.</p>
-      <div class="grid grid-3 mt-2">
+      <p class="mt-1" style="max-width: none;">To glorify God by being a faithful steward of all that is entrusted to us. To have a positive influence on all who come in contact with Chick-fil-A.</p>
+      <p class="mt-1" style="max-width: none;">We believe that a strong and caring culture is essential to our success. Chick-fil-A is committed to a workplace culture where everyone is treated with honor, dignity and respect.</p>
+      <div class="grid grid-2 mt-2">
         <div class="card">
           <div class="card-body">
-            <h3>Genuine Hospitality</h3>
-            <p>Every guest deserves to feel welcomed, valued, and cared for — every single visit.</p>
+            <h3>We're Here to Serve</h3>
+            <p>We keep the needs of our people and our customers at the heart of our work, doing what is best for the business and best for them.</p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
-            <h3>Quality You Can Taste</h3>
-            <p>We hold ourselves to a higher standard — in our food, our service, and our environment.</p>
+            <h3>We're Better Together</h3>
+            <p>We're an inclusive culture that leverages the strengths of our diverse talent to innovate and maximize our care for each other.</p>
           </div>
         </div>
         <div class="card">
           <div class="card-body">
-            <h3>Community Investment</h3>
-            <p>We actively support schools, nonprofits, and neighbors across Maple Grove.</p>
+            <h3>We Are Purpose-Driven</h3>
+            <p>We model our Purpose every day, supporting each other's efforts to be good stewards who create a positive impact.</p>
+          </div>
+        </div>
+        <div class="card">
+          <div class="card-body">
+            <h3>We Pursue What's Next</h3>
+            <p>We find energy in adapting and reinventing how we do things, from the way we work to how we care for others.</p>
           </div>
         </div>
       </div>
     </div>
-  </div>
 
-  <div class="section">
-    <h2>Our History</h2>
-    <p>Chick-fil-A was founded in 1967 by Truett Cathy in Hapeville, Georgia — with one simple idea: serve the best chicken sandwich anyone had ever tasted. Since then, Chick-fil-A has grown to thousands of locations nationwide, each one locally operated and deeply connected to its community.</p>
-    <p class="mt-1" style="color:var(--muted)">Our Maple Grove location carries on that legacy every day — one guest, one meal, one moment at a time.</p>
+    <!-- Our History -->
+    <div style="background: var(--white); padding: 3.5rem;">
+      <h2>Our History</h2>
+      <p class="mt-1">Chick-fil-A was founded in 1967 by Truett Cathy in Hapeville, Georgia, with one simple idea: serve the best chicken sandwich anyone had ever tasted. Since then, Chick-fil-A has grown to thousands of locations nationwide, each one locally operated and deeply connected to its community.</p>
+      <p class="mt-1" style="color:var(--muted)">Our Maple Grove location carries on that legacy every day, one guest, one meal, one moment at a time.</p>
+    </div>
+
   </div>
 
   <div style="background: var(--red)">
@@ -92,5 +104,6 @@
     &copy; 2026 · Locally operated
   </footer>
 
+  <script src="nav.js"></script>
 </body>
 </html>
