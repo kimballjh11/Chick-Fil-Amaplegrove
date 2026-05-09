@@ -33,77 +33,82 @@
     <div class="section">
       <h2>Why Work Here?</h2>
       <p>We invest in our team members the same way we invest in our guests, with genuine care and a commitment to helping you succeed.</p>
-      <div class="grid grid-3 mt-2">
-        <div class="card">
-          <div class="card-body">
-            <h3>Flexible Scheduling</h3>
-            <p>We work around school, family, and life. Balance matters.</p>
+      <div style="position:relative; margin-top:1.5rem; overflow:hidden;">
+        <div id="why-track" style="display:flex;">
+          <div class="card" style="min-width:100%; flex-shrink:0;">
+            <div class="card-body">
+              <h3>Flexible Scheduling</h3>
+              <p>We work around school, family, and life. Balance matters.</p>
+            </div>
+          </div>
+          <div class="card" style="min-width:100%; flex-shrink:0;">
+            <div class="card-body">
+              <h3>Scholarships</h3>
+              <p>Chick-fil-A awards millions in scholarships to team members every year through the True Inspiration Award.</p>
+            </div>
+          </div>
+          <div class="card" style="min-width:100%; flex-shrink:0;">
+            <div class="card-body">
+              <h3>Leadership Development</h3>
+              <p>Build real skills in hospitality, operations, and leadership that last a lifetime.</p>
+            </div>
+          </div>
+          <div class="card" style="min-width:100%; flex-shrink:0;">
+            <div class="card-body">
+              <h3>Competitive Pay</h3>
+              <p>We offer competitive wages and performance-based raises to reward great work.</p>
+            </div>
+          </div>
+          <div class="card" style="min-width:100%; flex-shrink:0;">
+            <div class="card-body">
+              <h3>Sundays Off</h3>
+              <p>Every Chick-fil-A is closed on Sundays. Always has been, always will be.</p>
+            </div>
+          </div>
+          <div class="card" style="min-width:100%; flex-shrink:0;">
+            <div class="card-body">
+              <h3>Team Culture</h3>
+              <p>We're more than coworkers. Come be part of a team that genuinely cares about each other.</p>
+            </div>
           </div>
         </div>
-        <div class="card">
-          <div class="card-body">
-            <h3>Scholarships</h3>
-            <p>Chick-fil-A awards millions in scholarships to team members every year through the True Inspiration Award.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h3>Leadership Development</h3>
-            <p>Build real skills in hospitality, operations, and leadership that last a lifetime.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h3>Competitive Pay</h3>
-            <p>We offer competitive wages and performance-based raises to reward great work.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h3>Sundays Off</h3>
-            <p>Every Chick-fil-A is closed on Sundays. Always has been, always will be.</p>
-          </div>
-        </div>
-        <div class="card">
-          <div class="card-body">
-            <h3>Team Culture</h3>
-            <p>We're more than coworkers. Come be part of a team that genuinely cares about each other.</p>
-          </div>
+        <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin-top:1.25rem;">
+          <button id="why-prev" onclick="whyCarousel(-1)" style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8592;</button>
+          <span id="why-dots" style="display:flex;gap:.5rem;"></span>
+          <button id="why-next" onclick="whyCarousel(1)" style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8594;</button>
         </div>
       </div>
+      <script>
+        (function(){
+          var idx = 0;
+          var perPage = 1;
+          var total = 6;
+          var pages = total;
+          var track = document.getElementById('why-track');
+          var dotsEl = document.getElementById('why-dots');
+          function buildDots(){
+            dotsEl.innerHTML = '';
+            for(var i=0;i<pages;i++){
+              var d = document.createElement('span');
+              d.style.cssText='width:.55rem;height:.55rem;border-radius:50%;background:'+(i===idx?'var(--red)':'#ccc')+';display:inline-block;transition:background .2s;';
+              dotsEl.appendChild(d);
+            }
+          }
+          function go(){
+            track.style.transform = 'translateX(-'+(idx * 100)+'%)';
+            track.style.transition = 'transform .35s ease';
+            buildDots();
+          }
+          window.whyCarousel = function(dir){
+            idx = (idx + dir + pages) % pages;
+            go();
+          };
+          buildDots();
+        })();
+      </script>
     </div>
   </div>
 
-  <div class="section">
-    <h2>Open Positions</h2>
-    <p>We're currently hiring for the following roles at our Maple Grove location.</p>
-    <div class="grid grid-2 mt-2">
-      <div class="card">
-        <div class="card-body">
-          <h3>Team Member – Front of House</h3>
-          <p>Full-time &amp; Part-time · All shifts available</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h3>Team Member – Kitchen</h3>
-          <p>Full-time &amp; Part-time · Morning and evening shifts</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h3>Team Leader</h3>
-          <p>Full-time · Experience in food service preferred</p>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-body">
-          <h3>Catering Coordinator</h3>
-          <p>Part-time · Strong organizational skills required</p>
-        </div>
-      </div>
-    </div>
-  </div>
 
   <div style="background: var(--off-wh)">
     <div class="section text-center">
