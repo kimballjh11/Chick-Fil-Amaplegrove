@@ -268,7 +268,7 @@ nav ul li a.staff:hover { background: rgba(255,255,255,.22); }
 .cta-red .section h2 { color: #fff; }
 .cta-red .section p  { color: rgba(255,255,255,.85); }
 
-/* ── Home page two-column grid (index.html) ── */
+/* ── Two-column panel grid (index.html, whoweare.html) ── */
 .home-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -279,6 +279,17 @@ nav ul li a.staff:hover { background: rgba(255,255,255,.22); }
   .home-panel { padding: 2rem 1.25rem; }
 }
 
+/* ── Operator split (whoweare.html) ── */
+.operator-split {
+  display: grid;
+  grid-template-columns: 1fr 1.1fr;
+  gap: 4rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .operator-split { grid-template-columns: 1fr; gap: 2rem; }
+}
+
 /* ── Card Grid ── */
 .grid {
   display: grid;
@@ -287,6 +298,7 @@ nav ul li a.staff:hover { background: rgba(255,255,255,.22); }
 }
 .grid-2 { grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); }
 .grid-3 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
+.grid-4 { grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); }
 .card {
   background: var(--white);
   border-radius: var(--radius);
