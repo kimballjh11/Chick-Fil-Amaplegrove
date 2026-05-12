@@ -31,83 +31,18 @@
     <p>More than a job. A place to grow, lead, and make a difference.</p>
   </div>
 
-  <div style="background: var(--off-wh)">
-    <div class="section">
+  <div style="background:#fff">
+    <div class="section text-center">
       <h2>Why Work Here?</h2>
-      <p>We invest in our team members the same way we invest in our guests, with genuine care and a commitment to helping you succeed.</p>
-      <div style="position:relative; margin-top:1.5rem; overflow:hidden;">
-        <div id="why-track" style="display:flex;">
-          <div class="card" style="min-width:100%; flex-shrink:0;">
-            <div class="card-body">
-              <h3>Flexible Scheduling</h3>
-              <p>We work around school, family, and life. Balance matters.</p>
-            </div>
-          </div>
-          <div class="card" style="min-width:100%; flex-shrink:0;">
-            <div class="card-body">
-              <h3>Scholarships</h3>
-              <p>Millions in scholarships awarded to team members every year.</p>
-            </div>
-          </div>
-          <div class="card" style="min-width:100%; flex-shrink:0;">
-            <div class="card-body">
-              <h3>Leadership Development</h3>
-              <p>Build real skills in hospitality, operations, and leadership that last a lifetime.</p>
-            </div>
-          </div>
-          <div class="card" style="min-width:100%; flex-shrink:0;">
-            <div class="card-body">
-              <h3>Competitive Pay</h3>
-              <p>We offer competitive wages and performance-based raises to reward great work.</p>
-            </div>
-          </div>
-          <div class="card" style="min-width:100%; flex-shrink:0;">
-            <div class="card-body">
-              <h3>Sundays Off</h3>
-              <p>Every Chick-fil-A is closed on Sundays. Always has been, always will be.</p>
-            </div>
-          </div>
-          <div class="card" style="min-width:100%; flex-shrink:0;">
-            <div class="card-body">
-              <h3>Team Culture</h3>
-              <p>We're more than coworkers. Come be part of a team that genuinely cares about each other.</p>
-            </div>
-          </div>
-        </div>
-        <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin-top:1.25rem;">
-          <button id="why-prev" onclick="whyCarousel(-1)" style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8592;</button>
-          <span id="why-dots" style="display:flex;gap:.5rem;"></span>
-          <button id="why-next" onclick="whyCarousel(1)" style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8594;</button>
-        </div>
-      </div>
-      <script>
-        (function(){
-          var idx = 0;
-          var perPage = 1;
-          var total = 6;
-          var pages = total;
-          var track = document.getElementById('why-track');
-          var dotsEl = document.getElementById('why-dots');
-          function buildDots(){
-            dotsEl.innerHTML = '';
-            for(var i=0;i<pages;i++){
-              var d = document.createElement('span');
-              d.style.cssText='width:.55rem;height:.55rem;border-radius:50%;background:'+(i===idx?'var(--red)':'#ccc')+';display:inline-block;transition:background .2s;';
-              dotsEl.appendChild(d);
-            }
-          }
-          function go(){
-            track.style.transform = 'translateX(-'+(idx * 100)+'%)';
-            track.style.transition = 'transform .35s ease';
-            buildDots();
-          }
-          window.whyCarousel = function(dir){
-            idx = (idx + dir + pages) % pages;
-            go();
-          };
-          buildDots();
-        })();
-      </script>
+      <p style="margin: 0 auto">We invest in our team members the same way we invest in our guests, with genuine care and a commitment to helping you succeed.</p>
+      <ul style="margin-top:1.5rem; line-height:1.7; display:inline-block; text-align:left;">
+        <li><strong>Flexible Scheduling</strong> &mdash; We work around school, family, and life. Balance matters.</li>
+        <li><strong>Scholarships</strong> &mdash; Millions in scholarships awarded to team members every year.</li>
+        <li><strong>Leadership Development</strong> &mdash; Build real skills in hospitality, operations, and leadership that last a lifetime.</li>
+        <li><strong>Competitive Pay</strong> &mdash; We offer competitive wages and performance-based raises to reward great work.</li>
+        <li><strong>Sundays Off</strong> &mdash; Every Chick-fil-A is closed on Sundays. Always has been, always will be.</li>
+        <li><strong>Team Culture</strong> &mdash; We're more than coworkers. Come be part of a team that genuinely cares about each other.</li>
+      </ul>
     </div>
   </div>
 
