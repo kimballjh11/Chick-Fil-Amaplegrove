@@ -290,6 +290,17 @@ nav ul li a.staff:hover { background: rgba(255,255,255,.22); }
   .operator-split { grid-template-columns: 1fr; gap: 2rem; }
 }
 
+/* ── Feature split: text + image side-by-side (cfa-one.html) ── */
+.feature-split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 3rem;
+  align-items: center;
+}
+@media (max-width: 768px) {
+  .feature-split { grid-template-columns: 1fr; gap: 2rem; }
+}
+
 /* ── Card Grid ── */
 .grid {
   display: grid;
