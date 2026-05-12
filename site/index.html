@@ -12,11 +12,25 @@
     #commit-track .card-body {
       padding: 1rem;
     }
+
     #commit-track .card-body h3 {
       font-size: .95rem;
     }
+
     #commit-track .card-body p {
       font-size: .82rem;
+      text-align: center;
+    }
+    #commit-track .card-body h3 {
+      text-align: center;
+    }
+
+    .cta-red .section h2 {
+      color: #ffffff;
+    }
+
+    .cta-red .section p {
+      color: rgba(255, 255, 255, .85);
     }
   </style>
 </head>
@@ -37,10 +51,15 @@
     </ul>
   </nav>
 
-  <section style="background: var(--white); display:flex; flex-direction:column; align-items:center; padding: 3rem 2rem 4rem; text-align:center;">
-    <img src="images/230331_CFA_Logo_Script-Outline-Red_PMS_high-res.png" alt="Chick-fil-A" style="max-width:480px; width:100%; height:auto; margin-bottom:2rem;">
-    <h1 style="font-family:var(--font-sans); font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:700; color:var(--red); margin-bottom:.75rem;">Welcome to Maple Grove</h1>
-    <p style="font-family:var(--font-serif); font-size:1.1rem; color:var(--muted); margin-bottom:1.75rem;">Great food. Great people. Maple Grove's best.</p>
+  <section
+    style="background: var(--white); display:flex; flex-direction:column; align-items:center; padding: 3rem 2rem 4rem; text-align:center;">
+    <img src="images/230331_CFA_Logo_Script-Outline-Red_PMS_high-res.png" alt="Chick-fil-A"
+      style="max-width:480px; width:100%; height:auto; margin-bottom:2rem;">
+    <h1
+      style="font-family:var(--font-sans); font-size:clamp(1.8rem,3.5vw,2.8rem); font-weight:700; color:var(--red); margin-bottom:.75rem;">
+      Welcome to Maple Grove</h1>
+    <p style="font-family:var(--font-serif); font-size:1.1rem; color:var(--muted); margin-bottom:1.75rem;">Great food.
+      Great people. Maple Grove's best.</p>
     <div style="display:flex; gap:1rem; flex-wrap:wrap; justify-content:center;">
       <a href="our-food.html" class="btn btn-red-outline">View Our Menu</a>
       <a href="catering.html" class="btn btn-red-solid">Order Catering</a>
@@ -56,7 +75,8 @@
       <div style="background: var(--white); padding: 3.5rem;">
         <h2>Find Us in Maple Grove</h2>
         <p>11820 Fountains Way, Maple Grove, MN 55369</p>
-        <p class="mt-1" style="color:var(--muted)"><a href="tel:7633070375" style="color:var(--muted)">(763) 307-0375</a></p>
+        <p class="mt-1" style="color:var(--muted)"><a href="tel:7633070375" style="color:var(--muted)">(763)
+            307-0375</a></p>
         <p class="mt-1" style="color:var(--muted)">Monday – Saturday: 6:30 AM – 10:00 PM<br>Sunday: Closed</p>
         <a href="https://www.google.com/maps/search/?api=1&query=11820+Fountains+Way,+Maple+Grove,+MN+55369"
           target="_blank" rel="noopener noreferrer" class="btn"
@@ -69,60 +89,66 @@
       <!-- Our Commitment -->
       <div style="background: var(--off-wh); padding: 3.5rem;">
         <h2>Our Commitment to You</h2>
-        <p>Chick-fil-A is committed to a culture where everyone is treated with honor, dignity and respect — from our team members to every guest who walks through our doors.</p>
+        <p>Chick-fil-A is committed to a culture where everyone is treated with honor, dignity and respect — from our
+          team members to every guest who walks through our doors.</p>
         <div style="position:relative; margin-top:1.5rem; overflow:hidden;">
           <div id="commit-track" style="display:flex;">
             <div class="card" style="min-width:100%; flex-shrink:0;">
               <div class="card-body">
                 <h3>We're Here to Serve</h3>
-                <p>Keeping people's needs at the heart of everything we do — one guest, one meal, one moment at a time.</p>
+                <p>Keeping people's needs at the heart of everything we do — one guest, one meal, one moment at a time.
+                </p>
               </div>
             </div>
             <div class="card" style="min-width:100%; flex-shrink:0;">
               <div class="card-body">
                 <h3>We're Better Together</h3>
-                <p>We believe in the strength of community and bring people together around great food and genuine care.</p>
+                <p>We believe in the strength of community and bring people together around great food and genuine care.
+                </p>
               </div>
             </div>
             <div class="card" style="min-width:100%; flex-shrink:0;">
               <div class="card-body">
                 <h3>We Are Purpose-Driven</h3>
-                <p>To glorify God by being a faithful steward of all that is entrusted to us and to have a positive influence on all who come in contact with Chick-fil-A.</p>
+                <p>To glorify God by being a faithful steward of all that is entrusted to us.</p>
               </div>
             </div>
             <div class="card" style="min-width:100%; flex-shrink:0;">
               <div class="card-body">
                 <h3>We Pursue What's Next</h3>
-                <p>Always adapting and reinventing to serve you better — in our food, our hospitality, and our community.</p>
+                <p>Always adapting and reinventing to serve you better — in our food, our hospitality, and our
+                  community.</p>
               </div>
             </div>
           </div>
           <div style="display:flex; align-items:center; justify-content:center; gap:1rem; margin-top:1.25rem;">
-            <button onclick="commitCarousel(-1)" style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8592;</button>
+            <button onclick="commitCarousel(-1)"
+              style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8592;</button>
             <span id="commit-dots" style="display:flex;gap:.5rem;"></span>
-            <button onclick="commitCarousel(1)" style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8594;</button>
+            <button onclick="commitCarousel(1)"
+              style="background:var(--red);color:#fff;border:none;border-radius:50%;width:2.25rem;height:2.25rem;font-size:1.1rem;cursor:pointer;line-height:1;">&#8594;</button>
           </div>
         </div>
         <script>
-          (function(){
+          (function () {
             var idx = 0;
             var total = 4;
             var track = document.getElementById('commit-track');
             var dotsEl = document.getElementById('commit-dots');
-            function buildDots(){
+            function buildDots() {
               dotsEl.innerHTML = '';
-              for(var i=0;i<total;i++){
+              for (var i = 0; i < total; i++) {
                 var d = document.createElement('span');
-                d.style.cssText='width:.55rem;height:.55rem;border-radius:50%;background:'+(i===idx?'var(--red)':'#ccc')+';display:inline-block;transition:background .2s;';
+                d.style.cssText = 'width:.55rem;height:.55rem;border-radius:50%;background:' + (i === idx ? 'var(--red)' : '#ccc') + ';display:inline-block;transition:background .2s;';
                 dotsEl.appendChild(d);
               }
             }
-            function go(){
-              track.style.transform = 'translateX(-'+(idx*100)+'%)';
+            function go() {
+              track.style.transform = 'translateX(-' + (idx * 100) + '%)';
               track.style.transition = 'transform .35s ease';
               buildDots();
             }
-            window.commitCarousel = function(dir){
+            window.commitCarousel = function (dir) {
               idx = (idx + dir + total) % total;
               go();
             };
@@ -140,7 +166,8 @@
         <div class="card">
           <div class="card-body">
             <h3>App Rewards</h3>
-            <p>Rewards exclusively on the app. <a href="https://www.chick-fil-a.com/app-download" target="_blank" rel="noopener noreferrer">Download it</a> to make sure you never miss out.</p>
+            <p>Rewards exclusively on the app. <a href="https://www.chick-fil-a.com/app-download" target="_blank"
+                rel="noopener noreferrer" style="color:var(--red);font-weight:600;">Download</a> it to make sure you never miss out.</p>
           </div>
         </div>
         <img src="images/CFA_Spring26_JalapenoRanchClub_StrawberryHibiscusSprite_US_On-White_high-res.png"
@@ -151,10 +178,10 @@
 
   </div>
 
-  <div style="background: var(--red)">
-    <div class="section text-center" style="color:#fff">
-      <h2 style="color:#fff">Catering for Any Occasion</h2>
-      <p style="color:rgba(255,255,255,.85); margin:0 auto">From office lunches to large events, let us take care of the
+  <div class="cta-red" style="background: var(--red)">
+    <div class="section text-center">
+      <h2>Catering for Any Occasion</h2>
+      <p style="margin:0 auto">From office lunches to large events, let us take care of the
         food so you can enjoy the moment.</p>
       <a href="catering.html" class="btn btn-white mt-2" style="margin-top:1.5rem; display:inline-block">Explore
         Catering</a>

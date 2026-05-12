@@ -98,10 +98,11 @@ nav ul li a {
   display: block;
   padding: .45rem .85rem;
   border-radius: var(--radius);
-  color: var(--white);
+  color: #ffffff;
   font-family: var(--font-sans);
   font-size: .9rem;
   font-weight: 500;
+  white-space: nowrap;
   transition: background .15s;
 }
 nav ul li a:hover,
