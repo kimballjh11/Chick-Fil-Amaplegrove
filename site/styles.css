@@ -268,14 +268,15 @@ nav ul li a.staff:hover { background: rgba(255,255,255,.22); }
 .cta-red .section h2 { color: #fff; }
 .cta-red .section p  { color: rgba(255,255,255,.85); }
 
-/* ── Mobile overrides for inline-styled home grid (index.html) ── */
+/* ── Home page two-column grid (index.html) ── */
+.home-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.home-panel { padding: 3.5rem; }
 @media (max-width: 768px) {
-  div[style*="grid-template-columns: 1fr 1fr"] {
-    grid-template-columns: 1fr !important;
-  }
-  div[style*="padding: 3.5rem"] {
-    padding: 2rem 1.25rem !important;
-  }
+  .home-grid { grid-template-columns: 1fr; }
+  .home-panel { padding: 2rem 1.25rem; }
 }
 
 /* ── Card Grid ── */
