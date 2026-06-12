@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Staff Portal · Chick-fil-A Maple Grove</title>
+  <link rel="stylesheet" href="styles.css">
+  <link rel="icon" type="image/png" href="images/CFA_CSymbol_Circle_Red_RGB_master.png">
+  <link rel="apple-touch-icon" href="images/CFA_CSymbol_Circle_Red_RGB_master.png">
+  <style>
+    .portal-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 1.5rem;
+      margin-top: 2rem;
+    }
+
+    .portal-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 1.75rem;
+    }
+
+    .portal-card h3 {
+      font-family: var(--font-sans);
+      font-size: 1.05rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-bottom: 1rem;
+      padding-bottom: .6rem;
+      border-bottom: 2px solid var(--gray);
+    }
+
+    .doc-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      gap: .6rem;
+    }
+
+    .doc-list li a {
+      display: flex;
+      align-items: center;
+      gap: .6rem;
+      font-family: var(--font-sans);
+      font-size: .92rem;
+      font-weight: 500;
+      color: var(--text);
+      padding: .55rem .75rem;
+      border-radius: 6px;
+      background: var(--off-wh);
+      transition: background .15s, color .15s;
+    }
+
+    .doc-list li a:hover {
+      background: var(--red);
+      color: var(--white);
+    }
+
+    .doc-list li a .doc-icon {
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+
+    .doc-badge {
+      margin-left: auto;
+      font-size: .72rem;
+      font-weight: 600;
+      letter-spacing: .04em;
+      opacity: .55;
+      text-transform: uppercase;
+    }
+
+    .scholarship-item {
+      display: flex;
+      flex-direction: column;
+      gap: .25rem;
+      padding: .75rem;
+      border-radius: 6px;
+      background: var(--off-wh);
+      margin-bottom: .6rem;
+    }
+
+    .scholarship-item:last-child {
+      margin-bottom: 0;
+    }
+
+    .scholarship-item strong {
+      font-family: var(--font-sans);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text);
+    }
+
+    .scholarship-item span {
+      font-family: var(--font-serif);
+      font-size: .88rem;
+      color: var(--muted);
+    }
+
+    .scholarship-amount {
+      font-family: var(--font-sans);
+      font-size: .82rem;
+      font-weight: 700;
+      color: var(--red);
+      margin-top: .15rem;
+    }
+
+    .benefit-list {
+      list-style: none;
+      display: flex;
+      flex-direction: column;
+      margin-top: 2rem;
+    }
+
+    .benefit-list>li {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+      gap: 1.5rem;
+      padding: 1.25rem 0;
+      border-bottom: 1px solid var(--gray);
+    }
+
+    .benefit-list>li:first-child {
+      border-top: 1px solid var(--gray);
+    }
+
+    .benefit-label {
+      font-family: var(--font-sans);
+      font-size: .95rem;
+      font-weight: 700;
+      color: var(--text);
+      padding-top: .1rem;
+      line-height: 1.4;
+    }
+
+    .benefit-detail ul {
+      list-style: disc;
+      padding-left: 1.25rem;
+      margin: 0;
+      font-family: var(--font-serif);
+      font-size: .93rem;
+      color: var(--muted);
+      line-height: 1.7;
+    }
+
+    .benefit-detail ul li {
+      margin-bottom: .3rem;
+    }
+
+    .benefit-detail ul li:last-child {
+      margin-bottom: 0;
+    }
+
+    @media (max-width: 600px) {
+      .benefit-list>li {
+        grid-template-columns: 1fr;
+        gap: .5rem;
+      }
+    }
+
+    #password-gate {
+      min-height: 80vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .gate-card {
+      background: var(--white);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      padding: 2.5rem 2rem;
+      width: 100%;
+      max-width: 380px;
+      text-align: center;
+    }
+
+    .gate-card h2 {
+      font-family: var(--font-sans);
+      font-size: 1.3rem;
+      font-weight: 700;
+      color: var(--text);
+      margin-bottom: .4rem;
+    }
+
+    .gate-card p {
+      font-family: var(--font-serif);
+      font-size: .92rem;
+      color: var(--muted);
+      margin-bottom: 1.5rem;
+    }
+
+    .gate-input {
+      width: 100%;
+      padding: .65rem .9rem;
+      font-family: var(--font-sans);
+      font-size: .95rem;
+      border: 2px solid var(--gray);
+      border-radius: 6px;
+      outline: none;
+      box-sizing: border-box;
+      transition: border-color .15s;
+      margin-bottom: .75rem;
+    }
+
+    .gate-input:focus {
+      border-color: var(--red);
+    }
+
+    .gate-btn {
+      width: 100%;
+      padding: .65rem;
+      background: var(--red);
+      color: var(--white);
+      font-family: var(--font-sans);
+      font-size: .95rem;
+      font-weight: 700;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: opacity .15s;
+    }
+
+    .gate-btn:hover {
+      opacity: .88;
+    }
+
+    .gate-error {
+      font-family: var(--font-sans);
+      font-size: .85rem;
+      color: var(--red);
+      margin-top: .6rem;
+      min-height: 1.2em;
+    }
+  </style>
+</head>
+
+<body>
+
+  <nav>
+    <div class="brand">Chick-fil-A <span>Maple Grove</span></div>
+    <button class="nav-toggle" aria-label="Toggle menu" aria-expanded="false">&#9776;</button>
+    <ul>
+      <li><a href="index.html">Welcome</a></li>
+      <li><a href="our-food.html">Our Menu</a></li>
+      <li><a href="catering.html">Catering</a></li>
+      <li><a href="whoweare.html">About Us</a></li>
+      <li><a href="joinourteam.html">Join Our Team</a></li>
+      <li><a href="cfa-one.html">CFA One</a></li>
+      <li><a href="stafflogin.html" class="staff">Staff Login</a></li>
+    </ul>
+  </nav>
+
+  <div id="password-gate">
+    <div class="gate-card">
+      <h2>Staff Portal</h2>
+      <p>Enter the team password to access internal resources.</p>
+      <input id="gate-input" class="gate-input" type="password" placeholder="Password" autocomplete="current-password">
+      <button class="gate-btn" onclick="checkPassword()">Enter</button>
+      <div class="gate-error" id="gate-error"></div>
+    </div>
+  </div>
+
+  <div id="portal-content" style="display:none">
+
+    <div class="page-header">
+      <h1>Staff Portal</h1>
+      <p>Internal resources for Maple Grove team members.</p>
+    </div>
+
+    <!-- Documents & Scholarships -->
+    <div class="section">
+      <h2>Team Member Resources</h2>
+      <p>Quick access to your documents, forms, and education assistance programs.</p>
+
+      <div class="portal-grid">
+
+        <!-- Documents & Forms -->
+        <div class="portal-card">
+          <h3>Documents &amp; Forms</h3>
+          <ul class="doc-list">
+            <li>
+              <a href="documents/Vision Statement.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                Vision Statement
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents/10 CFA Maple Grove Handbook.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                CFA Maple Grove Team Handbook
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents/BIG 6 explained.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                BIG 6 Explained
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents/team member health policy.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                Team Member Health Policy
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents/EAP.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                Employee Assistance Program (EAP)
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents/401k info.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                401(k) Information
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents/7 Habits of Highly Effective People.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                7 Habits of Highly Effective People
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+            <li>
+              <a href="documents/Team Member Commitment Consent Form.pdf" target="_blank" rel="noopener">
+                <span class="doc-icon">📄</span>
+                Team Member Commitment Consent Form
+                <span class="doc-badge">PDF</span>
+              </a>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Scholarship & Education -->
+        <div class="portal-card">
+          <h3>Education Assistance</h3>
+          <div class="scholarship-item">
+            <strong>Chick-fil-A Leadership Scholarship</strong>
+            <span>Awarded annually to eligible team members demonstrating leadership and community involvement.</span>
+            <div class="scholarship-amount">$1,000 to $2,500 per year</div>
+          </div>
+          <div class="scholarship-item">
+            <strong>True Inspiration Scholarship</strong>
+            <span>One-time scholarship open to Chick-fil-A team members pursuing higher education.</span>
+            <div class="scholarship-amount">Up to $25,000 one-time award</div>
+          </div>
+          <p
+            style="margin-top:1rem; font-family:var(--font-serif); font-size:.85rem; color:var(--muted); max-width:none;">
+            Speak with any leader for more information regarding scholarships or deadlines.
+          </p>
+        </div>
+
+      </div>
+    </div>
+
+    <!-- Benefits -->
+    <div class="section-alt">
+      <div class="section">
+        <h2>Team Member Benefits</h2>
+        <p>We invest in our team. Here's what working at Chick-fil-A Maple Grove looks like.</p>
+
+        <ul class="benefit-list">
+
+          <li>
+            <div class="benefit-label">Team Member &amp; Family Discount</div>
+            <div class="benefit-detail">
+              <ul>
+                <li>50% off meals for you and your family, even when not working</li>
+                <li>Eligibility tied to current CEM goals posted on the Focus Board</li>
+                <li>See a leader for current goal status</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="benefit-label">Meal Allowance</div>
+            <div class="benefit-detail">
+              <ul>
+                <li>Up to $11.50 allowance provided every shift</li>
+                <li>Must include a medium drink at the start of your shift</li>
+                <li>Drink must be kept in the designated location</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="benefit-label">Paid Time Off</div>
+            <div class="benefit-detail">
+              <ul>
+                <li>Available after 2 or more years of employment</li>
+                <li>Must maintain full-time hours (32+ hrs/week) to qualify</li>
+                <li>Eligible time will appear on your paycheck stub</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="benefit-label">Serve With a Purpose</div>
+            <div class="benefit-detail">
+              <ul>
+                <li>Volunteer opportunities with local Maple Grove non-profits</li>
+                <li>We arrange time for you to give back to the community</li>
+                <li>Talk to a leader to express interest</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="benefit-label">401(k) Plan</div>
+            <div class="benefit-detail">
+              <ul>
+                <li>Eligible after 12 months of employment</li>
+                <li>Dollar-for-dollar match up to 3% of your paycheck</li>
+                <li>Submit an expression of interest form to enroll</li>
+              </ul>
+            </div>
+          </li>
+
+          <li>
+            <div class="benefit-label">Grow With Us</div>
+            <div class="benefit-detail">
+              <ul>
+                <li>Access to books on leadership, motivation, and financial literacy</li>
+                <li>Resources for personal growth beyond your CFA career</li>
+                <li>Ask a leader about checking materials out</li>
+              </ul>
+            </div>
+          </li>
+
+        </ul>
+      </div>
+    </div>
+
+  </div><!-- /portal-content -->
+
+  <footer>
+    <strong>Chick-fil-A Maple Grove</strong><br>
+    11820 Fountains Way, Maple Grove, MN 55369 · <a href="tel:7633070375" style="color:inherit">Call us: (763)
+      307-0375</a><br>
+    <div style="margin:.75rem 0 .5rem; display:flex; justify-content:center; gap:1.5rem; align-items:center;">
+      <a href="https://www.facebook.com/chickfilamaplegrove/" target="_blank" rel="noopener" aria-label="Facebook"><img
+          src="images/facebook.svg" alt="Facebook" style="width:28px;height:28px;opacity:.85;transition:opacity .15s;"
+          onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85"></a>
+      <a href="https://www.instagram.com/cfamaplegrove/" target="_blank" rel="noopener" aria-label="Instagram"><img
+          src="images/instagram.svg" alt="Instagram" style="width:28px;height:28px;opacity:.85;transition:opacity .15s;"
+          onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85"></a>
+      <a href="https://www.tiktok.com/@chickfila.maplegrove" target="_blank" rel="noopener" aria-label="TikTok"><img
+          src="images/tiktok.svg" alt="TikTok" style="width:28px;height:28px;opacity:.85;transition:opacity .15s;"
+          onmouseover="this.style.opacity=1" onmouseout="this.style.opacity=.85"></a>
+    </div>
+    &copy; 2026 · Locally operated
+  </footer>
+
+  <script src="nav.js"></script>
+  <script>
+    const PASS = 'maplechicken';
+
+    function unlock() {
+      document.getElementById('password-gate').style.display = 'none';
+      document.getElementById('portal-content').style.display = 'block';
+    }
+
+    if (sessionStorage.getItem('staff_auth') === '1') unlock();
+
+    document.getElementById('gate-input').addEventListener('keydown', function (e) {
+      if (e.key === 'Enter') checkPassword();
+    });
+
+    function checkPassword() {
+      const val = document.getElementById('gate-input').value;
+      if (val === PASS) {
+        sessionStorage.setItem('staff_auth', '1');
+        unlock();
+      } else {
+        document.getElementById('gate-error').textContent = 'Incorrect password. Please try again.';
+        document.getElementById('gate-input').value = '';
+        document.getElementById('gate-input').focus();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
